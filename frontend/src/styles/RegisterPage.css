@@ -1,0 +1,265 @@
+@import './tokens.css';
+
+/* ==========================================================================
+   RegisterPage Stylesheet
+   ========================================================================== */
+
+/* Full-viewport page layout */
+.register-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  overflow-x: hidden;
+  background-color: var(--bg-deep);
+}
+
+/* Glassmorphic Auth Card */
+.register-card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 480px;
+  padding: 2.75rem 2.5rem;
+  border-radius: 24px;
+  background: rgba(11, 14, 28, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(168, 85, 247, 0.15);
+  text-align: center;
+  transition: border-color var(--transition-normal);
+}
+
+.register-card:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+/* Header Branding */
+.register-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-fast);
+}
+
+.register-brand-link:hover {
+  transform: translateY(-1px);
+}
+
+.register-brand-text {
+  font-size: 1.25rem;
+}
+
+/* Typography */
+.register-title {
+  font-family: var(--font-editorial);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--text-pure);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.register-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0 0 1.75rem;
+  line-height: 1.5;
+}
+
+/* Error Banner */
+.register-error-banner {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.14);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  animation: registerFadeIn 0.25s ease-out;
+}
+
+@keyframes registerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Structure */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.01em;
+}
+
+.register-input {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-pure);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: all var(--transition-fast);
+}
+
+.register-input::placeholder {
+  color: var(--text-muted);
+}
+
+.register-input:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.register-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--light-violet);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.25), 0 0 15px rgba(168, 85, 247, 0.15);
+}
+
+/* Role Selection Toggle */
+.register-role-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.register-role-btn {
+  padding: 0.8rem 0.6rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.register-role-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.register-role-btn.active-user {
+  background: rgba(168, 85, 247, 0.18);
+  border-color: var(--light-violet);
+  color: var(--text-pure);
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.25);
+}
+
+.register-role-btn.active-artist {
+  background: rgba(244, 114, 182, 0.18);
+  border-color: var(--light-pink);
+  color: var(--text-pure);
+  box-shadow: 0 0 14px rgba(244, 114, 182, 0.25);
+}
+
+/* Submit Button */
+.register-submit-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.95rem;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.register-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Footer Navigation Links */
+.register-switch {
+  margin-top: 1.85rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.register-switch-link {
+  color: var(--light-violet);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.register-switch-link:hover {
+  color: var(--neon-cyan-bright);
+  text-decoration: underline;
+}
+
+.register-back-container {
+  margin-top: 1rem;
+}
+
+.register-back-link {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.register-back-link:hover {
+  color: var(--text-primary);
+  transform: translateX(-3px);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 520px) {
+  .register-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .register-card {
+    padding: 2rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .register-title {
+    font-size: 1.85rem;
+  }
+
+  .register-role-group {
+    grid-template-columns: 1fr;
+  }
+}

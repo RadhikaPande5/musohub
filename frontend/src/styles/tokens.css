@@ -1,0 +1,63 @@
+:root {
+  /* Cosmic Color Palette */
+  --bg-deep: #060814;
+  --bg-space: #0a0d24;
+  --bg-surface: rgba(14, 18, 38, 0.6);
+  --bg-card: rgba(20, 24, 48, 0.5);
+  --bg-card-hover: rgba(30, 36, 70, 0.6);
+
+  /* Astral Light & Accent Tokens */
+  --neon-cyan: #38bdf8;
+  --neon-cyan-bright: #67e8f9;
+  --neon-violet: #a855f7;
+  --neon-purple: #8b5cf6;
+  --neon-pink: #f472b6;
+  --neon-magenta: #e879f9;
+
+  --light-blue: #38bdf8;
+  --light-indigo: #6366f1;
+  --light-violet: #a855f7;
+  --light-pink: #f472b6;
+
+  /* Atmospheric Gradients */
+  --grad-aurora: linear-gradient(135deg, #38bdf8 0%, #818cf8 40%, #c084fc 75%, #f472b6 100%);
+  --grad-headline-people: linear-gradient(90deg, #c084fc 0%, #a855f7 30%, #818cf8 60%, #38bdf8 100%);
+  --grad-join-btn: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 50%, #9333ea 100%);
+  --grad-join-btn-hover: linear-gradient(135deg, #6d28d9 0%, #7c3aed 50%, #8b5cf6 100%);
+  --grad-button: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 50%, #9333ea 100%);
+  --grad-button-hover: linear-gradient(135deg, #6d28d9 0%, #7c3aed 50%, #8b5cf6 100%);
+
+  /* Text Hierarchy */
+  --text-pure: #ffffff;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-subtle: #cbd5e1;
+  --text-muted: #64748b;
+  --text-accent: #c084fc;
+
+  /* Glassmorphism & Borders */
+  --border-ultra-subtle: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.16);
+  --border-active: rgba(168, 85, 247, 0.45);
+  --border-glow: rgba(168, 85, 247, 0.35);
+  --border-cyan-glow: rgba(56, 189, 248, 0.35);
+  --glass-bg: rgba(6, 8, 20, 0.5);
+  --glass-dock: rgba(9, 12, 28, 0.72);
+
+  /* Shadows & Glows */
+  --glow-cyan: 0 0 15px rgba(56, 189, 248, 0.4);
+  --glow-pink: 0 0 15px rgba(244, 114, 182, 0.4);
+  --glow-purple: 0 0 20px rgba(139, 92, 246, 0.45);
+  --glow-button: 0 0 24px rgba(139, 92, 246, 0.5), 0 4px 16px rgba(0, 0, 0, 0.4);
+  --glow-flare: 0 0 25px rgba(139, 92, 246, 0.5), 0 0 50px rgba(56, 189, 248, 0.2);
+
+  /* Typography */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+
+  /* Animation Timings */
+  --ease-cosmic: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
